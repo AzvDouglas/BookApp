@@ -7,25 +7,28 @@ html, body {
 h1 {
     font-size: 36px;
     font-weight: bold;
-    color: #333; /* Cor do título */
+    color: #18283a;
     text-align: center;
-    margin-top: 50px;
 }
 
 button {
     background-color: #ddd; /* Cor cinza claro */
-    border: none;
+    border: solid 1px var(--tecnovix-light);
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 20px; 
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 button:hover {
     background-color: #4CAF50; /* Cor verde */
     color: #fff;
 }
+
+
 
 /* Estilos para o container */
 .container {
@@ -37,5 +40,8 @@ button:hover {
     margin: 0;
 }
 
-/* Restante dos estilos */
-/* ... */
+title {
+    padding: 100px 0px 60px 0px;
+    background-color: #2a9ee2;
+    text-align: center;
+}
