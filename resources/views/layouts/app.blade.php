@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="{{ asset('css/basic.css') }}">
 </head>
 <body>
-	@component('component.navbar')
+    
+    @component('components.navbar')
 		
 	@endcomponent
 

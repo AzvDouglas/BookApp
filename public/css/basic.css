@@ -28,6 +28,20 @@ button:hover {
     color: #fff;
 }
 
+.custom-button {
+    background-color: var(--tecnovix-dark);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: var(--tecnovix-light);
+    color: white;
+}
 
 
 /* Estilos para o container */
@@ -40,8 +54,25 @@ button:hover {
     margin: 0;
 }
 
-title {
-    padding: 100px 0px 60px 0px;
-    background-color: #2a9ee2;
-    text-align: center;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
 }

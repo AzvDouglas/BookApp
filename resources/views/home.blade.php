@@ -8,7 +8,7 @@
 		<button>Consultar Livros</button>
 	</a>
 
-	<a href="/livros/cadastrar">
+	<a href="/livros/cadastro">
 		<button>Cadastrar Livro</button>
 	</a>
 </div>

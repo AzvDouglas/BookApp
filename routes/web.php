@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get("livros", "App\Http\Controllers\LivroController@index");
+Route::get("livros", "App\Http\Controllers\LivroController@index")->name("livros.index");
+Route::get("livros/cadastro", "App\Http\Controllers\LivroController@create")->name("livros.create");
+Route::post("livros/cadastro", "App\Http\Controllers\LivroController@store")->name("livros.store");
