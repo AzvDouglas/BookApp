@@ -13,11 +13,17 @@ return new class extends Migration
     {
         Schema::create('livros', function (Blueprint $table) {
             $table->id();
+            $table->string('isbn')->unique();
             $table->string('titulo');
             $table->string('autor');
-            $table->integer('ano_publicacao');
+            $table->integer('numero_paginas');
+            $table->string('idioma');
+            $table->string('genero')->nullable();
+            $table->string('editora')->nullable();
+            $table->text('sinopse')->nullable();
+            $table->year('ano_publicacao')->nullable();
             $table->string('nome_imagem')->nullable(); // Campo para armazenar o nome da imagem
-            $table->string('imagem')->nullable(); // Campo para armazenar o caminho da imagem
+            $table->string('capa')->nullable(); // Campo para armazenar o caminho da imagem
             $table->timestamps();
         });
     }

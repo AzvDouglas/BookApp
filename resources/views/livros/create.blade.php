@@ -7,6 +7,8 @@
 	</div>
 
 	<x-forms.cadastro-livro></x-forms.cadastro-livro>
+	{{-- <x-forms.form></x-forms.form> --}}
+
 
 </div>
 
