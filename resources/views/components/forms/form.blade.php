@@ -1,5 +1,5 @@
 <div class="main">
-	<link rel="stylesheet" href="{{ asset('css/formulario.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/form.css') }}">
     <form action="{{ route('livros.store') }}" method="POST" enctype="multipart/form-data" class="form-columns">
         @csrf
 

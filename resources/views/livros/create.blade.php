@@ -2,9 +2,8 @@
 @section('content')
 
 <div class="container">
-	<div>
-		<h1>Cadastro de Novo Livro</h1>
-	</div>
+	
+	<h1>Cadastro de Novo Livro</h1>
 
 	<x-forms.cadastro-livro></x-forms.cadastro-livro>
 	{{-- <x-forms.form></x-forms.form> --}}

@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="{{ asset('css/basic.css') }}">
 </head>
 <body>
-    
-    @component('components.navbar')
-		
-	@endcomponent
 
-	@yield('content')
+    <div class="container">
+        <header>
+            @component('components.navbar')
+            @endcomponent
+        </header>
+    
+        <main>
+            @yield('content')
+        </main>
+    </div>
 
 </body>
 </html>

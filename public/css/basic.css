@@ -5,13 +5,23 @@ html, body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 186px 1fr;
+    grid-row-gap: 20px;
+    height: 100%;
     margin: 0;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 186px;
+    padding: 20px;
+    color: white;
+}
+
 
 h1 {
     font-size: 36px;
@@ -21,13 +31,16 @@ h1 {
 }
 
 button {
-    background-color: #ddd; /* Cor cinza claro */
-    border: solid 1px var(--tecnovix-light);
+    background-color: var(--tecnovix-dark);
+    color: white;
+    border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 20px; 
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 5px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
@@ -35,4 +48,5 @@ button {
 button:hover {
     background-color: #4CAF50; /* Cor verde */
     color: #fff;
+    font-weight: bold;
 }
