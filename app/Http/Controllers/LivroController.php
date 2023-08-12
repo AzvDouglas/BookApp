@@ -14,6 +14,7 @@ class LivroController extends Controller
     {
         //Listar todos os livros
         $livros = Livro::all();
+        //dd($livros); //TODO: Remover e substituir por uma view com a lista de livros
         return view('livros.index', ['livros' => $livros]);
     }
 
@@ -33,7 +34,10 @@ class LivroController extends Controller
     public function store(Request $request)
     {
         //
-        dd('store');
+        $livro = $request->all();
+        Livro::create($livro);
+        return redirect()->route('livros.index');
+        //dd($request->all());
     }
 
     /**
@@ -50,6 +54,8 @@ class LivroController extends Controller
     public function edit(string $id)
     {
         //
+        $livro = Livro::find($id);
+        return view('livros.edit', ['livro' => $livro]);
     }
 
     /**
@@ -58,6 +64,9 @@ class LivroController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $livro = Livro::find($id);
+        $livro->update($request->all());
+        return redirect()->route('livros.index');
     }
 
     /**
@@ -66,5 +75,8 @@ class LivroController extends Controller
     public function destroy(string $id)
     {
         //
+        $livro = Livro::find($id);
+        $livro->delete();
+        return redirect()->route('livros.index');
     }
 }
