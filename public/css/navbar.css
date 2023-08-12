@@ -2,10 +2,11 @@
 :root {
 	--tecnovix-dark: #18283a;
 	--tecnovix-light: #773dbe;
+    --navbar-height: 244px;
 }
 
 .Nav {
-	width: 100%;
+    display: flex;
 }
 
 .Rectangle1 {
@@ -19,7 +20,7 @@
 
 .Rectangle2 {
     width: 396px;
-    height: 244px;
+    height: var(--navbar-height);
     left: 0px;
     top: 0px;
     position: absolute;
@@ -28,7 +29,7 @@
 
 .Ellipse1 {
     width: 352px;
-    height: 244px;
+    height: var(--navbar-height);
     left: 198px;
     top: 0px;
     position: absolute;
@@ -39,7 +40,7 @@
 .Rectangle3 {
     width: 100%;
     height: 72px;
-    left: 374px;
+    left: 0px;
     top: 0px;
     position: absolute;
     background: var(--tecnovix-dark);
@@ -71,3 +72,4 @@
     top: 93px;
     position: absolute;
 }
+
