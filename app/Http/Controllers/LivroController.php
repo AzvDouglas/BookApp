@@ -46,6 +46,8 @@ class LivroController extends Controller
     public function show(string $id)
     {
         //
+        $livro = Livro::find($id);
+        return view('livros.show', ['livro' => $livro]);
     }
 
     /**
