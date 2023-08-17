@@ -11,6 +11,7 @@
 				<th>Autor</th>
 				<th>Gênero</th>
 				<th>ISBN</th>
+				<th>Ações</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -21,7 +22,14 @@
 				<td>{{ $livro->genero }}</td>
 				<td>{{ $livro->isbn }}</td>
 				<td>
-					<a href="{{ route('livros.edit', $livro->id) }}">Editar</a>
+					<a href="{{ route('livros.show', $livro->id) }}">
+						<x-button id="detalhes">Detalhes</x-button>
+					</a>
+
+					<a href="{{ route('livros.edit', $livro->id) }}">
+						<x-button id="editar-livro">Editar</x-button>
+					</a>
+
 					<form action="{{ route('livros.destroy', $livro->id) }}" method="POST">
 						@csrf
 						@method('DELETE')
@@ -32,7 +40,10 @@
 			@endforeach
 		</tbody>
 	</table>
-	<a href="{{ route('livros.create') }}">Novo Livro</a>
+
+	<a href="{{ route('livros.create') }}">
+		<button id="novo-livro">Novo Livro</button>
+	</a>
 </div>
 @endsection
 
