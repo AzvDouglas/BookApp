@@ -41,6 +41,7 @@ class LivroController extends Controller
             
             if (isset($responseData['items'])) {
                 $volumes = $responseData['items'];
+                dd($volumes);
     
                 $livros = [];
                 foreach ($volumes as $volume) {
