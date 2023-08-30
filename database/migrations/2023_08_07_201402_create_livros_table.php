@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('idioma');
             $table->string('genero')->nullable();
             $table->string('editora')->nullable();
-            $table->text('sinopse')->nullable();
+            $table->text('descricao')->nullable();
             $table->year('ano_publicacao')->nullable();
             $table->string('nome_imagem')->nullable();
             $table->timestamps();

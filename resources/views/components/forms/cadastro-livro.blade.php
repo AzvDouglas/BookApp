@@ -1,7 +1,7 @@
 <div>
     <link rel="stylesheet" href="{{ asset('css/form-cadastro.css') }}">
 
-    <form action="{{ route('livros.store') }}" method="POST" enctype="multipart/form-data" class="form-columns">
+    <form action="{{ route('livros.create') }}" method="POST" enctype="multipart/form-data" class="form-columns">
         @csrf
 
         <div class="fields">
@@ -37,8 +37,8 @@
                     <input type="text" id="editora" name="editora">
                 </div>
                 <div class="form-group">
-                    <label for="sinopse">Sinopse</label>
-                    <textarea id="sinopse" name="sinopse" rows="4"></textarea>
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" name="descricao" rows="4"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="ano_publicacao">Ano de Publicação</label>
@@ -54,8 +54,7 @@
                 </div>
             </div>
 
-            <x-button type="submit">Cadastrar</x-button>
-
+            <x-button type="submit">Cadastrar Livro</x-button>
         </div>
 
     </form>
